@@ -1,6 +1,6 @@
 # Marketing Content Management Platform(Demo)
 
-![Image](https://github.com/user-attachments/assets/1025ce34-f2a8-4089-8980-fcc26ba51039)
+![Image](https://github.com/user-attachments/assets/4ab25b6b-3911-464c-b547-71a5cbca371d)
 
 ## Overview
 
