@@ -33,10 +33,10 @@ class AI:
 
     async def review_document(self, document: str) -> AsyncGenerator[str | None, None]:
         """
-        Review patent document and provide suggestions.
+        Review content document and provide suggestions.
 
         Arguments:
-        document -- Patent document to review. Will error if this includes HTML or markdown.
+        document -- content document to review. Will error if this includes HTML or markdown.
 
         Response:
         Should return a generator that yields a review from an AI.

@@ -6,6 +6,7 @@ import axios from "axios";
 import LoadingOverlay from "./internal/LoadingOverlay";
 import Logo from "./assets/logo.png";
 import { SelectableVersion } from "./types.ts";
+import binIcon from "./assets/bin.png";
 import {
   fetchPatent,
   savePatentAPI,
@@ -379,7 +380,7 @@ function App() {
                             : "",
                       }}
                     >
-                      Patent {patentId}
+                      Content {patentId}
                     </button>
                     {versionList.map((version) => (
                       <button
@@ -401,16 +402,18 @@ function App() {
                               : "",
                         }}
                       >
-                        <span>{version.created_at}</span>
-                        <span
+                        <span>
+                          {version.created_at}
+                          &nbsp;&nbsp;
+                        </span>
+                        <img
+                          src={binIcon}
                           className="trash-icon"
                           onClick={(e) => {
                             e.stopPropagation();
                             deleteVersion(version.patent_parent, version.id);
                           }}
-                        >
-                          🗑
-                        </span>
+                        />
                       </button>
                     ))}
                   </div>
@@ -419,9 +422,9 @@ function App() {
             </Column>
             <Column flex={1}>
               {!currentVersionId ? (
-                <DocumentTitle>{`Patent ${currentDocumentId} `}</DocumentTitle>
+                <DocumentTitle>{`Content ${currentDocumentId} `}</DocumentTitle>
               ) : (
-                <DocumentTitle>{`Patent ${currentDocumentId} ${versionName}`}</DocumentTitle>
+                <DocumentTitle>{`Content ${currentDocumentId} ${versionName}`}</DocumentTitle>
               )}
               <Document
                 onContentChange={setCurrentDocumentContent}
