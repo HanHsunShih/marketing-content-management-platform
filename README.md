@@ -1,5 +1,7 @@
 # Marketing Content Management Platform(Demo)
 
+![Image](https://github.com/user-attachments/assets/1025ce34-f2a8-4089-8980-fcc26ba51039)
+
 ## Overview
 
 This platform helps me and my illustration team manage marketing content and product descriptions more efficiently, especially with the 8-hour time difference between the UK and Taiwan.
