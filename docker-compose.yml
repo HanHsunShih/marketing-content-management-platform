@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  server:
+    container_name: EngineeringChallenge_Server
+    build: ./server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server:/usr/src/app
+      - ./server/app/internal/database:/usr/src/app/app/internal/database
+    env_file:
+      - ./server/.env
+
+  client:
+    container_name: EngineeringChallenge_Client
+    build: ./client
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
